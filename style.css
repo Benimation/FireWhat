@@ -1,0 +1,121 @@
+@charset "UTF-8";
+/* created by Benimation */
+
+* {
+	margin: 0;
+	padding: 0;
+	
+}
+
+html, body {
+	font-family: Arial;
+	height: 100%;
+	
+}
+
+#splash {
+	/*background-image: url("img/firewhat.png");*/
+	background-color: #000F0D;
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: center;
+	display: block;
+	height: 100%;
+	width: 100%;
+}
+
+#splash video {
+	height: 100%;
+	width: 100%;
+	
+}
+
+.slider {
+	width: 100%;
+	background-image: url(img/match.png), url(img/luciferdoosje.png);
+	-webkit-appearance: none;
+	background-repeat: no-repeat, repeat;
+	background-position: 151px, 0;
+	height: 20px;
+	outline: none;
+	background-size: auto 20px;
+	background-color: rgba(0,0,0,0);
+	-webkit-appearance: none;
+	
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  height: 20px;
+  width: 24px;
+  background: rgba(0,0,0,0);
+  cursor: move;
+  
+}
+
+#simulation {
+	background-color: rgba(0, 15, 13, 0.9);
+	background-repeat: repeat no-repeat;
+	color: #fff;
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	display: none;
+	
+}
+
+#simulation ul {
+	margin-left: auto;
+	margin-right: auto;
+	vertical-align: top;
+	display: inline-block;
+	width: 98%;
+	padding: 1%;
+	
+}
+
+#simulation ul li {
+	width: 30%;
+	display: inline-block;
+	padding: 1%;
+	vertical-align: top;
+	
+}
+
+#view {
+	background-image: url("img/in.jpg");
+	height: 100%;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-color: #000F0D;
+	color: #fff;
+	display: none;
+	
+}
+
+#deur {
+	background-color: #741d00;
+	color: white;
+	font-size: 3em;
+	display: inline-block;
+	padding: 8%;
+	cursor: pointer;
+	
+}
+
+.toggle {
+	background-image: url(img/m.png);
+	display: inline-block;
+	background-size: 180px;
+	background-repeat: no-repeat;
+	background-position: center;
+	height: 60px;
+	width: 100%;
+	cursor: pointer;
+	
+}
+
+#loss, #loss span {
+	margin: 20px 0 10px 0;
+	
+}

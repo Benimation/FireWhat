@@ -1,0 +1,81 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="initial-scale=1">
+<link rel="stylesheet" href="style.css" />
+<title>Benimation</title>
+</head>
+
+<body>
+<div id="splash"><video src="splash.mp4" autoplay muted /></div>
+<div id="view"></div>
+
+<div id="simulation">
+	<ul>
+    <li>
+        <p>Tinnitus frequentie 1</p>
+        <input class="slider" id="frequency1" type="range" value="0" />
+        <p>Tinnitus frequentie 2</p>
+        <input class="slider" id="frequency2" type="range" value="0" />
+        <p>Ruis</p>
+        <input class="slider" id="noiseGain" type="range" value="0" />
+        
+    </li>
+    <li>
+    	<input type="checkbox" id="loss" /><span> Schakel verlies in/uit</span>
+        <p>Leeftijd</p>
+        <input class="slider" id="age" type="range" value="0" />
+        <p>Geslacht</p>
+		<div class="toggle"></div>
+    	
+    </li>
+    
+    <li>
+    	<div id="deur" class="button">Naar buiten</div>
+        
+    </li>
+    </ul>
+    
+</div>
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script language="javascript" src="randomfire.js"></script>
+<script language="javascript" src="outrandom.js"></script>
+<script language="javascript" src="outside.js"></script>
+<script language="javascript" src="inrandom.js"></script>
+<script language="javascript" src="inside.js"></script>
+<script language="javascript" src="sim.js"></script>
+<script language="javascript" src="loss.js"></script>
+<script language="javascript" src="damage.js"></script>
+<script language="javascript" src="uisound.js"></script>
+<script>
+// Initialize web audio
+var context;
+try {
+	window.AudioContext = window.AudioContext||window.webkitAudioContext;
+	context = new AudioContext();
+	
+	// Main gain
+	var mainGain = context.createGain();
+	mainGain.gain.value = 1;
+	mainGain.connect(context.destination);
+	
+	
+	
+	// connect to UI sounds
+	initUI();
+	
+	initdamage();
+	
+}
+catch(e) {
+	console.log(e);
+	
+}
+
+</script>
+<script language="javascript" src="script.js"></script>
+</body>
+</html>
